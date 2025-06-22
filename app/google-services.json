@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "386093459477",
+    "project_id": "music-player-f24ff",
+    "storage_bucket": "music-player-f24ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386093459477:android:dd93716a05ca10c658c61c",
+        "android_client_info": {
+          "package_name": "com.made_by_aasho_or_aka.musicPlayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386093459477-sa42q295mm1ntoqsi08dvkr3c7is98et.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4o7KsJlVoaU83unBHLU5mEor_k3yjC6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386093459477-sa42q295mm1ntoqsi08dvkr3c7is98et.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

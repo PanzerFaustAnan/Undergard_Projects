@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.made_by_aasho_or_aka.musicPlayer">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.made_by_aasho_or_aka.musicPlayer.ApplicationClass"
+        android:allowBackup="true"
+        android:icon="@mipmap/music_player_icon"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/music_player_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/splash_screen"
+        tools:ignore="AllowBackup">
+        <activity
+            android:name="com.made_by_aasho_or_aka.musicPlayer.PlayNext"
+            android:exported="false" />
+        <activity
+            android:name="com.made_by_aasho_or_aka.musicPlayer.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.made_by_aasho_or_aka.musicPlayer.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.made_by_aasho_or_aka.musicPlayer.StartActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.made_by_aasho_or_aka.musicPlayer.AboutActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.made_by_aasho_or_aka.musicPlayer.SettingsActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.made_by_aasho_or_aka.musicPlayer.FeedbackActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.made_by_aasho_or_aka.musicPlayer.SelectionActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.made_by_aasho_or_aka.musicPlayer.PlaylistDetails"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.made_by_aasho_or_aka.musicPlayer.PlaylistActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.made_by_aasho_or_aka.musicPlayer.FavouriteActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.made_by_aasho_or_aka.musicPlayer.PlayerActivity"
+            android:configChanges="uiMode"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="AppLinkUrlError,LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:mimeType="audio/*"
+                    android:scheme="content" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.made_by_aasho_or_aka.musicPlayer.MainActivity"
+            android:configChanges="uiMode"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.made_by_aasho_or_aka.musicPlayer.MusicService" />
+
+        <receiver
+            android:name="com.made_by_aasho_or_aka.musicPlayer.NotificationReceiver"
+            android:enabled="true" />
+    </application>
+
+</manifest>
